@@ -9,36 +9,37 @@
     <link rel="stylesheet" href="/css/all.css">
 </head>
 
-<header class="font-body shadow-md bg-white fixed relative w-full">
-    <div class="flex justify-between">
-        <div class="flex">
-            <div>
-                <img src="/img/logo polstat.jpg" class="w-20 p-3 ml-12" alt="logo polstat">
+<body class="font-body">
+    <div class="shadow-xl bg-white fixed w-full z-50">
+        <div class="px-20 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="w-16 h-16 rounded-full bg-gray-100 mr-3">
+                        <img src="/img/STISlogo.png" alt="logo polstat">
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-bold w-72 text-blue-500 leading-tight align-top">SISTEM INFORMASI DATABASE ALUMNI AIS/STIS/POLSTAT STIS</h1>
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <nav>
+                        <ul class="flex gap-x-10 font-bold">
+                            <li><a href="/" class="hover:text-blue-500 border-b-2 border-white hover:border-blue-500">Login</a></li>
+                            <li><a href="/register" class="hover:text-blue-500 border-b-2 border-white hover:border-blue-500">Register</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            <div class="mt-3">
-                <h1 class="font-bold text-lg text-blue-700">SISTEM INFORMASI DATABASE</h1>
-                <h1 class="font-bold text-lg text-blue-700">ALUMNI AIS/STIS/POLSTAT STIS</h1>
-            </div>
-        </div>
-        <div class="mr-16 mt-6">
-            <nav>
-                <ul class="flex gap-x-10 font-bold">
-                    <li><a href="/" class="hover:text-blue-600 hover:underline">Login</a></li>
-                    <li><a href="/register" class="hover:text-blue-600 hover:underline">Register</a></li>
-                </ul>
-            </nav>
         </div>
     </div>
-</header>
-
-<body class="font-body bg-gray-100">
-    <?= $this->renderSection('content'); ?>
+    <div class="w-full h-screen flex flex-wrap font-dmsans box-border relative">
+        <div class="mt-28">
+            <?= $this->renderSection('content'); ?>
+        </div>
+    </div>
+    <div class="mb-4 mt-8 w-full justify-center absolute bottom-0">
+        <h3 class="text-center font-medium text-sm">Copyright &copy;2020 PKL STIS 60</h3>
+    </div>
 </body>
-
-<footer class="font-body mt-12 mb-4">
-    <div>
-        <h1 class="text-center font-bold text-sm">Copyright &copy;2020 PKL STIS 60</h1>
-    </div>
-</footer>
 
 </html>

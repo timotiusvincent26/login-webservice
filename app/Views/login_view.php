@@ -6,16 +6,15 @@
 } else {
     $state = false;
 } ?>
-<img src="img/bg.jpg" alt="bg" class="fixed w-full left-0 bottom-0" style="z-index: -1;">
 <div class="w-screen h-screen sm:grid sm:grid-cols-2 sm:gap-0 md:gap-12 py-0 px-8 xl:gap-32 lg:gap-24">
     <div class="sm:flex justify-end items-center hidden">
         <img src="/img/login.svg" alt="login" style="width: 500px;">
     </div>
-    <div class="translate-y-48 sm:translate-y-0 flex justify-center items-center">
-        <form style="width: 450px;" method="POST" action="login/masuk" class="bg-gray-200 py-8 rounded-3xl shadow-2xl">
+    <div class="flex justify-center items-center">
+        <form style="width: 450px;" method="POST" action="/login/masuk" class="bg-gray-200 py-8 rounded-3xl shadow-2xl transform translate-y-48 sm:translate-y-0">
             <?= csrf_field(); ?>
             <img src="/img/avatar.svg" alt="avatar" class="w-24 mx-auto">
-            <h2 class="text-4xl mt-2 -mb-2 text-center">LOGIN USER</h2>
+            <h2 class="text-4xl mt-2 text-center">LOGIN USER</h2>
             <div class="my-4 mx-8 py-2 px-0 border-b-2 <?= ($state) ? 'border-blue-600' : ' border-gray-600'; ?> mt-0" style="display: grid;grid-template-columns: 7% 93%;">
                 <div class="flex justify-center items-center relative h-10">
                     <i class="i fas fa-user <?= ($state) ? 'text-blue-700' : 'opacity-50'; ?> duration-500"></i>
@@ -49,7 +48,7 @@
             <div class="flex justify-between mb-4 mt-0">
                 <div class="ml-8">
                     <input type="checkbox" class="cursor-pointer">
-                    <label for="check" class="sm:text-sm lg:text-base text-base cursor-pointer duration-500 text-gray-700">Remember Me</label>
+                    <label for="check" id="remember" class="sm:text-sm lg:text-base text-base cursor-pointer duration-500 text-gray-700">Remember Me</label>
                 </div>
                 <a href="/login/reset" class="sm:text-sm lg:text-base text-base no-underline text-gray-700 duration-500 hover:text-blue-700 mr-6">Lupa Password?</a>
             </div>
@@ -59,7 +58,7 @@
             <span class="flex justify-center">Atau</span>
             <div class="flex justify-center mt-4 mb-4">
                 <div class="bg-gray-400 flex justify-center py-1 rounded-full w-64 transform hover:scale-105 shadow-2xl duration-300 hover:bg-gray-200">
-                    <img src="/img/google.png" alt="google" width="40" height="40" class="mr-4">
+                    <img src="/img/logo.png" alt="google" width="40" height="40" class="mr-4">
                     <h3 class="flex items-center cursor-pointer hover:text-blue-600">Login with SIPADU</h3>
                 </div>
             </div>
@@ -70,8 +69,8 @@
                 </div>
             </div>
         </form>
-        <script src="public/js/eye.js"></script>
-        <script src="public/js/main.js"></script>
+        <script src="/js/eye.js"></script>
+        <script src="/js/main.js"></script>
     </div>
 </div>
 <?= $this->endSection(); ?>
