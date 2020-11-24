@@ -6,13 +6,12 @@
 } else {
     $state = false;
 } ?>
-<img src="/img/bg.jpg" alt="bg" class="fixed w-full left-0 bottom-0" style="z-index: -5;">
 <div class="w-screen h-screen sm:grid sm:grid-cols-2 sm:gap-0 md:gap-12 py-0 px-8 xl:gap-32 lg:gap-24">
     <div class="sm:flex justify-end items-center hidden">
         <img src="/img/login.svg" alt="login" style="width: 500px;">
     </div>
-    <div class="translate-y-24 mt-4 sm:translate-y-0 flex justify-center items-center">
-        <form style="width: 470px;" method="POST" action="register/terdaftar" class="bg-gray-200 py-6 rounded-3xl shadow-2xl">
+    <div class="flex justify-center items-center">
+        <form style="width: 470px;" method="POST" action="/register/terdaftar" class="bg-gray-200 py-6 rounded-3xl shadow-2xl transform translate-y-32 sm:translate-y-0">
             <?= csrf_field(); ?>
             <img src="/img/avatar.svg" alt="avatar" class="w-24 mx-auto">
             <h2 class="text-4xl mt-2 -mb-2 text-center">REGISTER</h2>
@@ -88,7 +87,6 @@
                     echo $validation->getError('konfir-pass');
                 } ?>
             </span>
-            <a href="#" class="block text-right no-underline text-gray-700 text-base duration-500 hover:text-blue-600 mr-6 mb-4 mt-0">Lupa Password?</a>
             <div class="flex justify-center my-4">
                 <input type="submit" class="shadow-2xl block h-10 px-40 sm:px-24 md:px-32 lg:px-40 rounded-3xl text-lg outline-none border-none bg-blue-600 cursor-pointer text-gray-300 duration-500 uppercase hover:bg-blue-700 mx-6" value="Register">
             </div>

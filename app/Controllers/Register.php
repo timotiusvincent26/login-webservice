@@ -61,7 +61,10 @@ class Register extends BaseController
             $validation = \Config\Services::validation();
             return redirect()->to('/register/index')->withInput()->with('validation', $validation);
         }
-        return view('success_register');
+        $data = [
+            'title' => 'Register'
+        ];
+        return view('success_register', $data);
     }
 
     public function success()
